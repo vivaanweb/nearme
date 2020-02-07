@@ -1,0 +1,58 @@
+<md-dialog flex="100" flex-gt-xs="50" aria-label="App Config dialog">
+
+    <form name="form" role="form" novalidate>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{ 'APP_CONFIG' | translate }}</h2>
+                <span flex></span>
+                <ng-md-icon aria-label="Close dialog" icon="close" class="icon-close" ng-click="hide()">
+                </ng-md-icon>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+
+            <md-content layout="column" layout-padding>
+
+                <p class="md-title">{{ 'EMAIL_SETTINGS' | translate }}</p>
+                
+                <md-input-container>
+                    <label>{{ 'EMAIL_FOR_NOTIFICATIONS_OF_NEW_LISTINGS' | translate }}</label>
+                    <input type="email" name="emailAddress" placeholder ng-model="obj.email.addressForNewListings">
+                </md-input-container>
+                
+                <md-input-container>
+                    <label>{{ 'SUBJECT_FOR_NOTIFICATIONS_OF_NEW_LISTINGS' | translate }}</label>
+                    <input type="text" name="emailSubject" placeholder ng-model="obj.email.subjectForNewListings">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>{{ 'BUTTON_TEXT_OF_NEW_LISTINGS' | translate }}</label>
+                    <input type="text" name="emailButtonText" placeholder ng-model="obj.email.buttonTextForNewListings">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>{{ 'BODY_FOR_NOTIFICATIONS_OF_NEW_LISTINGS' | translate }}</label>
+                    <textarea name="emailBody" ng-model="obj.email.bodyForNewListings" rows="2" placeholder>
+                    </textarea>
+                    <span class="md-caption">
+                        {{ 'SUPPORTED_TAGS' | translate }}:
+                        %PLACE_NAME%, %PLACE_DESCRIPTION%, %USER_NAME%
+                    </span>
+                </md-input-container>
+
+            </md-content>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="hide()">
+                {{ 'CLOSE' | translate }}
+            </md-button>
+            <span flex></span>
+            <md-button type="submit" class="md-raised md-primary" ng-click="onSave()">
+                {{ !isSaving ? ('SAVE' | translate) : ('SAVING' | translate) }}
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
