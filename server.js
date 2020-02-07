@@ -84,12 +84,12 @@ const api = new ParseServer({
       apiKey: process.env.MAILGUN_API_KEY,
     }
   },
-  push: {
+push: {
     android: {
       senderId: process.env.PUSH_ANDROID_SENDER_ID,
       apiKey: process.env.PUSH_ANDROID_API_KEY
     },
-    ios: [{
+    /* ios: [{
         pfx: __dirname + '/push/dev.p12',
         topic: process.env.PUSH_IOS_BUNDLE_ID,
         production: false
@@ -99,7 +99,7 @@ const api = new ParseServer({
         topic: process.env.PUSH_IOS_BUNDLE_ID,
         production: true
       }
-    ]
+    ] */
   },
 })
 
