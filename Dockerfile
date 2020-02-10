@@ -10,7 +10,7 @@ ADD . /app
 ENV NODE_ENV='production'
 ENV LOG_LEVEL='error'
 
-ENV PUBLIC_SERVER_URL='https://nearme.quanlabs.com'
+ENV PUBLIC_SERVER_URL='https://nearme.degula.in'
 ENV PARSE_SERVER_MOUNT '/api'
 
 ENV APP_NAME='Degula'
