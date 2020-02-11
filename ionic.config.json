@@ -1,7 +1,0 @@
-{
-  "name": "Nearme 5",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
