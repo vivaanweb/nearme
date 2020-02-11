@@ -1,0 +1,1 @@
+import{p as e,b as s}from"./p-9d53efe9.js";e().then(e=>s([["p-fwkcfyvk",[[1,"web-social-share",{show:[1028],share:[16]},[[0,"socialShareLoaded","moveSlotOnLoad"],[0,"selected","hide"]]],[1,"web-social-share-target",{displayNames:[4,"display-names"],share:[16]}]]]],{resourcesUrl:e}));

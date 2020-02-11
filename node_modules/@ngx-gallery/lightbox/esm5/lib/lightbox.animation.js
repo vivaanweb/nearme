@@ -1,0 +1,16 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { animate, state, style, transition, trigger } from '@angular/animations';
+/** @type {?} */
+export var lightboxAnimation = trigger('lightbox', [
+    // Note: The `enter` animation transitions to `transform: none`, because for some reason
+    // specifying the transform explicitly, causes IE both to blur the dialog content and
+    // decimate the animation performance. Leaving it as `none` solves both issues.
+    state('void, exit', style({ opacity: 0, transform: 'scale(0.7)' })),
+    state('enter', style({ transform: 'none' })),
+    transition('* => enter', animate('150ms cubic-bezier(0, 0, 0.2, 1)', style({ transform: 'none', opacity: 1 }))),
+    transition('* => void, * => exit', animate('75ms cubic-bezier(0.4, 0.0, 0.2, 1)', style({ opacity: 0 }))),
+]);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlnaHRib3guYW5pbWF0aW9uLmpzIiwic291cmNlUm9vdCI6Im5nOi8vQG5neC1nYWxsZXJ5L2xpZ2h0Ym94LyIsInNvdXJjZXMiOlsibGliL2xpZ2h0Ym94LmFuaW1hdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLE9BQU8sRUFBRSxLQUFLLEVBQUUsS0FBSyxFQUFFLFVBQVUsRUFBRSxPQUFPLEVBQUUsTUFBTSxxQkFBcUIsQ0FBQzs7QUFFakYsTUFBTSxLQUFPLGlCQUFpQixHQUFHLE9BQU8sQ0FBQyxVQUFVLEVBQUU7SUFDbkQsd0ZBQXdGO0lBQ3hGLHFGQUFxRjtJQUNyRiwrRUFBK0U7SUFDL0UsS0FBSyxDQUFDLFlBQVksRUFBRSxLQUFLLENBQUMsRUFBQyxPQUFPLEVBQUUsQ0FBQyxFQUFFLFNBQVMsRUFBRSxZQUFZLEVBQUMsQ0FBQyxDQUFDO0lBQ2pFLEtBQUssQ0FBQyxPQUFPLEVBQUUsS0FBSyxDQUFDLEVBQUMsU0FBUyxFQUFFLE1BQU0sRUFBQyxDQUFDLENBQUM7SUFDMUMsVUFBVSxDQUFDLFlBQVksRUFBRSxPQUFPLENBQUMsa0NBQWtDLEVBQ2pFLEtBQUssQ0FBQyxFQUFDLFNBQVMsRUFBRSxNQUFNLEVBQUUsT0FBTyxFQUFFLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztJQUMxQyxVQUFVLENBQUMsc0JBQXNCLEVBQy9CLE9BQU8sQ0FBQyxxQ0FBcUMsRUFBRSxLQUFLLENBQUMsRUFBQyxPQUFPLEVBQUUsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO0NBQ3ZFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhbmltYXRlLCBzdGF0ZSwgc3R5bGUsIHRyYW5zaXRpb24sIHRyaWdnZXIgfSBmcm9tICdAYW5ndWxhci9hbmltYXRpb25zJztcclxuXHJcbmV4cG9ydCBjb25zdCBsaWdodGJveEFuaW1hdGlvbiA9IHRyaWdnZXIoJ2xpZ2h0Ym94JywgW1xyXG4gIC8vIE5vdGU6IFRoZSBgZW50ZXJgIGFuaW1hdGlvbiB0cmFuc2l0aW9ucyB0byBgdHJhbnNmb3JtOiBub25lYCwgYmVjYXVzZSBmb3Igc29tZSByZWFzb25cclxuICAvLyBzcGVjaWZ5aW5nIHRoZSB0cmFuc2Zvcm0gZXhwbGljaXRseSwgY2F1c2VzIElFIGJvdGggdG8gYmx1ciB0aGUgZGlhbG9nIGNvbnRlbnQgYW5kXHJcbiAgLy8gZGVjaW1hdGUgdGhlIGFuaW1hdGlvbiBwZXJmb3JtYW5jZS4gTGVhdmluZyBpdCBhcyBgbm9uZWAgc29sdmVzIGJvdGggaXNzdWVzLlxyXG4gIHN0YXRlKCd2b2lkLCBleGl0Jywgc3R5bGUoe29wYWNpdHk6IDAsIHRyYW5zZm9ybTogJ3NjYWxlKDAuNyknfSkpLFxyXG4gIHN0YXRlKCdlbnRlcicsIHN0eWxlKHt0cmFuc2Zvcm06ICdub25lJ30pKSxcclxuICB0cmFuc2l0aW9uKCcqID0+IGVudGVyJywgYW5pbWF0ZSgnMTUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSknLFxyXG4gICAgc3R5bGUoe3RyYW5zZm9ybTogJ25vbmUnLCBvcGFjaXR5OiAxfSkpKSxcclxuICB0cmFuc2l0aW9uKCcqID0+IHZvaWQsICogPT4gZXhpdCcsXHJcbiAgICBhbmltYXRlKCc3NW1zIGN1YmljLWJlemllcigwLjQsIDAuMCwgMC4yLCAxKScsIHN0eWxlKHtvcGFjaXR5OiAwfSkpKSxcclxuXSk7XHJcblxyXG4iXX0=
